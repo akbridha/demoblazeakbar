@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>end_to_end_login_positif</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b289661f-d6ec-4a8b-b988-5de1a6c321ab</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>end_to_end_checkout_user_filter_multiple_category</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>59e447fb-89b0-4561-913c-4d2ba8e964dd</testCaseGuid>
+</TestCaseEntity>

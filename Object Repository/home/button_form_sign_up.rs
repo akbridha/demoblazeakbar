@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_form_sign_up</name>
+   <tag></tag>
+   <elementGuidId>0552de22-b323-4301-ba2a-88c62575185d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@id=&quot;signin2&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//a[@id=&quot;signin2&quot;]</value>
+      <webElementGuid>ffa9e2df-bf2f-44a2-9d95-f50e87cf4fa0</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

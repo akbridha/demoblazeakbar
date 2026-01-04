@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>container_category_filter</name>
+   <tag></tag>
+   <elementGuidId>a7bf1182-7e95-4573-9511-de0ab08ef515</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//h4[@id='cat']/following-sibling::a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//h4[@id='cat']/following-sibling::a</value>
+      <webElementGuid>fd6b1ca7-dd9f-4df2-acb2-371dd1921ff8</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

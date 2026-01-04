@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>table_head_cart</name>
+   <tag></tag>
+   <elementGuidId>16c42892-157c-4798-a687-846252f9a99e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//table//thead//${field}</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//table//thead//${field}</value>
+      <webElementGuid>196a690a-eac4-463e-9c9e-51c59fc3df91</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

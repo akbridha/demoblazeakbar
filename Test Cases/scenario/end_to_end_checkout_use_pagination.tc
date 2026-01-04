@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>end_to_end_checkout_use_pagination</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>47e226c5-b603-461d-87da-7b66ae94ce1c</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>field_sign_up</name>
+   <tag></tag>
+   <elementGuidId>84c06c3c-9e35-4102-ac7b-fbdb47c19a09</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@id=&quot;${field}&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//input[@id=&quot;${field}&quot;]</value>
+      <webElementGuid>180b48a5-5a1f-4a60-805d-6a4f7d535d67</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

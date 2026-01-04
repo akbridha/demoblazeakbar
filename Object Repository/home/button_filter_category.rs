@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_filter_category</name>
+   <tag></tag>
+   <elementGuidId>cf3deed5-c00e-4638-90f5-65250ea54e43</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[text()=&quot;${category}&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//a[text()=&quot;${category}&quot;]</value>
+      <webElementGuid>a5722a18-0440-4e1f-b17b-5dd0bf5627c0</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>
