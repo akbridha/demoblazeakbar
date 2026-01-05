@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_page_navigation</name>
+   <name>button_add_to_cart</name>
    <tag></tag>
-   <elementGuidId>6035d7f5-8779-4c09-b88f-c2bfc567c9a7</elementGuidId>
+   <elementGuidId>2ed63eeb-781d-46a6-8a82-2fc1fc08f647</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[contains(@class,'page-link') and normalize-space(.)='${mode}']</value>
+         <value>//a[text()=&quot;Add to cart&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -18,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//button[contains(@class,'page-link') and normalize-space(.)='${mode}']</value>
-      <webElementGuid>91fee2b3-febe-41f7-817b-e28697d71457</webElementGuid>
+      <value>//a[text()=&quot;Add to cart&quot;]</value>
+      <webElementGuid>c6571725-ea9f-4263-9658-b3d3c2a2cc04</webElementGuid>
    </webElementProperties>
 </WebElementEntity>
