@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>product_add_to_cart</name>
+   <name>navigate_to_product_detail</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>be32a415-b8ab-4850-94ef-e03c2d6cdfe3</testCaseGuid>
+   <testCaseGuid>20efa496-3ffd-4028-b454-0df8bfea8a7c</testCaseGuid>
 </TestCaseEntity>

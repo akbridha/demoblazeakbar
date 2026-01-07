@@ -17,5 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.acceptAlert()
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://www.demoblaze.com/')
+
+WebUI.click(findTestObject('home/item_samsung_galaxy_s6'))
+
+String productName = WebUI.getText(findTestObject('Object Repository/product/product_detail_name'))
+
+productName = productName.toLowerCase()
+
+WebUI.verifyMatch(productName, 'samsung galaxy s6', false)
+
+WebUI.click(findTestObject('product/button_add_to_cart'))
+
+WebUI.verifyAlertPresent(0)
 

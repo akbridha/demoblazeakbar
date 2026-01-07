@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>cart_label_visible</name>
+   <name>product_detail_match</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>6565f8cc-6010-461e-bfa7-ec3b5e0e112c</testCaseGuid>
+   <testCaseGuid>c84faa98-7f30-49ab-a438-20ff9bca8b6f</testCaseGuid>
 </TestCaseEntity>

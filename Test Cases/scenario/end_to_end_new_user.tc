@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>product_add_to_cart</name>
+   <name>end_to_end_new_user</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>be32a415-b8ab-4850-94ef-e03c2d6cdfe3</testCaseGuid>
+   <testCaseGuid>44d3f1fc-191d-4514-b18e-f1b64a82b799</testCaseGuid>
 </TestCaseEntity>

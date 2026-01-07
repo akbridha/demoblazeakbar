@@ -20,31 +20,12 @@ import org.openqa.selenium.WebElement
 WebUI.openBrowser("https://www.demoblaze.com/index.html")
 
 
+
+
+//#####ANGGAP INI DATA DARI DOKUMEN PRD
+
 String [] kategoriExpected = ["Phones", "Laptops", "Monitors"]
 
-String[] phones = [
-	"Samsung Galaxy S6",
-	"Nokia Lumia 1520",
-	"Nexus 6",
-	"Samsung Galaxy S7",
-	"iPhone 6 32GB",
-	"Sony Xperia Z5",
-	"HTC One M9"
-];
-
-String[] laptops = [
-	"Sony Vaio i5",
-	"Sony Vaio i7",
-	"MacBook Air",
-	"Dell i7 8GB",
-	"2017 Dell 15.6 Inch",
-	"MacBook Pro"
-];
-
-String[] monitors = [
-	"Apple Monitor 24",
-	"ASUS Full HD"
-];
 
 
 //WebUI.click(findTestObject('Object Repository/home/button_filter_category', ['category':'Phones']))

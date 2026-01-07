@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>category_filter_clickable</name>
+   <tag></tag>
+   <elementGuidId>bbe5a4bc-ffcf-45b9-b3c7-bed38bfcf083</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[text()=&quot;${kategori}&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//a[text()=&quot;${kategori}&quot;]</value>
+      <webElementGuid>4e150ee9-53f4-42c8-b01a-0526dcc8f736</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

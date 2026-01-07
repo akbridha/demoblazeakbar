@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>button_product_category</name>
+   <name>product_exist</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>fc16638b-1a2b-4b75-908d-0ecbec946628</testCaseGuid>
+   <testCaseGuid>05a67e60-2a04-45b3-a395-e16d20cee0f1</testCaseGuid>
 </TestCaseEntity>

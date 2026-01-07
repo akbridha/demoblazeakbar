@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>button_navigate_home_page</name>
+   <name>button_cart_navigate</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>ac78453c-8255-4718-add4-44bb90d75f0a</testCaseGuid>
+   <testCaseGuid>6565f8cc-6010-461e-bfa7-ec3b5e0e112c</testCaseGuid>
 </TestCaseEntity>

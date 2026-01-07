@@ -21,9 +21,7 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://www.demoblaze.com/')
 
-WebUI.click(findTestObject('home/button_page_navigation', [('mode') : 'Next']))
+WebUI.click(findTestObject('home/item_samsung_galaxy_s6'))
 
-WebUI.click(findTestObject('home/item_MacBook_pro'))
-
-WebUI.click(findTestObject('product/button_add_to_cart'))
+WebUI.closeBrowser()
 
