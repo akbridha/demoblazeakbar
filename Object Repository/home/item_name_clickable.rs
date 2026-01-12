@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[@class=&quot;col-lg-4 col-md-6 mb-4&quot;]/div/div/h4/a[normalize-space(.)=&quot;${productName}&quot;]</value>
+         <value>//h4/a[normalize-space(.)=&quot;${productName}&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -18,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//div[@class=&quot;col-lg-4 col-md-6 mb-4&quot;]/div/div/h4/a[normalize-space(.)=&quot;${productName}&quot;]</value>
-      <webElementGuid>1e515d8d-96e5-4bfd-9f21-1eb4d8748c80</webElementGuid>
+      <value>//h4/a[normalize-space(.)=&quot;${productName}&quot;]</value>
+      <webElementGuid>aa36a85b-b09b-4a73-bc87-30614c6bff3f</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

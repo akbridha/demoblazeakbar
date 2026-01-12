@@ -30,7 +30,7 @@ boolean itemFound, buttonNextVisible
 
 TestObject product = findTestObject(
 	'Object Repository/home/item_name_clickable',
-	["productName": "Nokia lumia 152"]
+	["productName": "Nokia lumia 1520"]
 )
 
 TestObject nextBtn = findTestObject(
@@ -85,7 +85,7 @@ if (!found) {
 WebUI.click(product)
 
 WebUI.click(findTestObject('Object Repository/product/button_add_to_cart'))
-
+WebUI.closeBrowser()
 
 
 //println(itemFound)

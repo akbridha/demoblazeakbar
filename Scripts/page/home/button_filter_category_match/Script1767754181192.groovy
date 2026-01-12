@@ -127,16 +127,22 @@ for (String kategori : availableCategory) {
 			["kategori": kategori]
 		))
 	
+		// jaga jga halaman belum  load setelah klik filter
+		WebUI.delay(2)
+	
 		// ambil item berdasarkan kategori
 		List<String> items = categoryItems[kategori]
+		println(kategori)
 //	
 //		// validasi item tampil
 		for (String item : items) {
+			println("item yang di verify : " + item)
 	
-			WebUI.verifyElementVisible(findTestObject(
+			// gunakan waitForElementVisible untuk menghindari stale element
+			WebUI.waitForElementVisible(findTestObject(
 				'Object Repository/home/item_name_clickable',
 				["productName": item]
-			))
+			), 10)
 		}
 	}
 	
