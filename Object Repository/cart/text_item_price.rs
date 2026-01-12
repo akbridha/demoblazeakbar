@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>text_item_price</name>
+   <tag></tag>
+   <elementGuidId>00dbf304-7cb9-46be-90c5-42b781902cb9</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//td[text()=&quot;${productName}&quot;]/parent::tr[@class=&quot;success&quot;]/td[3]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//td[text()=&quot;${productName}&quot;]/parent::tr[@class=&quot;success&quot;]/td[3]</value>
+      <webElementGuid>d3319362-b0d5-4a1c-8a57-2dc18d389177</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>
