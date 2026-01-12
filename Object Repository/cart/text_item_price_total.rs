@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>text_item_price_total</name>
+   <tag></tag>
+   <elementGuidId>628a8881-f739-4dbd-a387-0b4f8d2c8dfe</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//h3[@id=&quot;totalp&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//h3[@id=&quot;totalp&quot;]</value>
+      <webElementGuid>c70ce2d3-b1b1-4076-83ab-90f0e9001709</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_delete_item</name>
+   <tag></tag>
+   <elementGuidId>99dfe240-5a9b-4513-8361-05bf20f77ab8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//td[text()=&quot;${productName}&quot;]/parent::tr[@class=&quot;success&quot;]/td[4]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//td[text()=&quot;${productName}&quot;]/parent::tr[@class=&quot;success&quot;]/td[4]/a</value>
+      <webElementGuid>373c9c1b-cfa6-4ab6-96fe-ba5c173e6ac7</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>
