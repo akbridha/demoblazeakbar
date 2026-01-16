@@ -19,9 +19,10 @@ import org.openqa.selenium.Keys as Keys
 
 
 WebUI.openBrowser("https://www.demoblaze.com/index.html")
-ArrayList productToClick = [];
+ArrayList productToClick = ['Iphone 6 32gb'];
 
 //WebUI.click(findTestObject('Object Repository/product/product_item_hardcoded'))
 //WebUI.click(findTestObject('null'))
-WebUI.click(findTestObject('Object Repository/product/product_item_dynamic_text',['field':'Iphone 6 32gb']))
+//WebUI.click(findTestObject('Object Repository/product/product_item_dynamic_text',['field':'Iphone 6 32gb']))
 //WebUI.closeBrowser()
+WebUI.click(findTestObject('Object Repository/home/item_name_clickable',["productName":productToClick[0]]))

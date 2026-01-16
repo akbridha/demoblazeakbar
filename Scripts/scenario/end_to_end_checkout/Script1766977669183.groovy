@@ -34,5 +34,5 @@ WebUI.callTestCase(findTestCase('page/product/product_add_to_cart'), [:], Failur
 
 WebUI.callTestCase(findTestCase('page/product/product_detail_match'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.acceptAlert()
+
 
