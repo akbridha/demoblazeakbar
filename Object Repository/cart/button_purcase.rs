@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>table_head_cart</name>
+   <name>button_purcase</name>
    <tag></tag>
-   <elementGuidId>16c42892-157c-4798-a687-846252f9a99e</elementGuidId>
+   <elementGuidId>ef160549-31c5-49c7-ba75-e946275aec66</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>BASIC</key>
-         <value>//table/thead/tr/th[text()=&quot;${headerText}&quot;]</value>
+         <value>//button[text()='Purchase']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -18,7 +22,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//table/thead/tr/th[text()=&quot;${headerText}&quot;]</value>
-      <webElementGuid>18c7f723-3425-4b4c-93d4-5e95db52615c</webElementGuid>
+      <value>//button[text()='Purchase']</value>
+      <webElementGuid>57c8c8fd-eb14-4e87-8f51-a236e16e97c6</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

@@ -17,8 +17,28 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.navigateToUrl('https://www.demoblaze.com/index.html')
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/cart/table_head_cart'), FailureHandling.STOP_ON_FAILURE)
 
+// Terima array produk dari skenario 
+ArrayList tableHeaders = arrayPassedTableHeader as ArrayList
+//WebUI.openBrowser('')
+//WebUI.navigateToUrl('https://www.demoblaze.com/index.html')
+
+WebUI.click(findTestObject('Object Repository/home/button_cart_page'))
+
+// WebUI.verifyElementVisible(findTestObject('Object Repository/cart/table_head_cart', [('headerText') : 'Pic']), FailureHandling.STOP_ON_FAILURE)
+
+// WebUI.verifyElementVisible(findTestObject('Object Repository/cart/table_head_cart', [('headerText') : 'Title']), FailureHandling.STOP_ON_FAILURE)
+
+// WebUI.verifyElementVisible(findTestObject('Object Repository/cart/table_head_cart', [('headerText') : 'Price']), FailureHandling.STOP_ON_FAILURE)
+
+
+
+// verifikasi erdasarkan data yg dipasssing dari skenario
+for (int i = 0; i < tableHeaders.size(); i++) {
+
+	String expected = tableHeaders[i]
+	WebUI.comment('Verifying product in cart: ' + expected)
+	WebUI.verifyTextPresent(expected, false, FailureHandling.STOP_ON_FAILURE)
+}
 

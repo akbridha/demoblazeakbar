@@ -18,9 +18,16 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 def products = ['Iphone 6 32gb', 'Nexus 6', 'Samsung galaxy s7']
+
 def tableHeader = ['Pic', 'Title', 'Price']
+
+def arrayData = ['Jamal', 'arkansas', 'dellaware', '716630082', '11', '2028']
+
 WebUI.callTestCase(findTestCase('page/product/product_add_to_cart_dynamic'), [('arrayPassedFromTestCase') : products], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('page/cart/cart_page_opened'), [('arrayPassedTableHeader') : tableHeader], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.callTestCase(findTestCase('page/cart/place_order'), [('dataBuyer') : arrayData], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('page/cart/order_info_match'), [('dataBuyer') : arrayData], FailureHandling.STOP_ON_FAILURE)
 

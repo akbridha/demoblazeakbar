@@ -17,10 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-def products = ['Iphone 6 32gb', 'Nexus 6', 'Samsung galaxy s7']
-def tableHeader = ['Pic', 'Title', 'Price']
-WebUI.callTestCase(findTestCase('page/product/product_add_to_cart_dynamic'), [('arrayPassedFromTestCase') : products], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('cart/button_place_order'))
 
-WebUI.callTestCase(findTestCase('page/cart/cart_page_opened'), [('arrayPassedTableHeader') : tableHeader], FailureHandling.STOP_ON_FAILURE)
+// Terima array produk dari skenario (langsung)
+ArrayList dataBuyer = dataBuyer as ArrayList
 
+String name = dataBuyer[0]
+String country = dataBuyer[1]
+String city = dataBuyer[2]
+String card = dataBuyer[3]
+String month = dataBuyer[4]
+String year = dataBuyer[5]
+
+WebUI.setText(findTestObject('Object Repository/cart/input_checkout', ['inputId':'name']), name)
+WebUI.setText(findTestObject('Object Repository/cart/input_checkout', ['inputId':'country']), country)
+WebUI.setText(findTestObject('Object Repository/cart/input_checkout', ['inputId':'city']), city)
+WebUI.setText(findTestObject('Object Repository/cart/input_checkout', ['inputId':'card']), card)
+WebUI.setText(findTestObject('Object Repository/cart/input_checkout', ['inputId':'month']), month)
+WebUI.setText(findTestObject('Object Repository/cart/input_checkout', ['inputId':'year']), year)
+
+WebUI.click(findTestObject('cart/button_purcase'))
+//WebUI.verifyElementVisible(findTestObject)
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>table_head_cart</name>
+   <name>input_checkout</name>
    <tag></tag>
-   <elementGuidId>16c42892-157c-4798-a687-846252f9a99e</elementGuidId>
+   <elementGuidId>d42a4362-2208-48ee-a91c-026f64985830</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//table/thead/tr/th[text()=&quot;${headerText}&quot;]</value>
+         <value>//input[@id=&quot;${inputId}&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -18,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//table/thead/tr/th[text()=&quot;${headerText}&quot;]</value>
-      <webElementGuid>18c7f723-3425-4b4c-93d4-5e95db52615c</webElementGuid>
+      <value>//input[@id=&quot;${inputId}&quot;]</value>
+      <webElementGuid>623c4b42-d4e9-4637-a107-b441737bdb3b</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>table_head_cart</name>
+   <name>button_place_order</name>
    <tag></tag>
-   <elementGuidId>16c42892-157c-4798-a687-846252f9a99e</elementGuidId>
+   <elementGuidId>a1599fce-4942-48bc-8267-2f06ad2972ad</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>BASIC</key>
-         <value>//table/thead/tr/th[text()=&quot;${headerText}&quot;]</value>
+         <value>//button[text()=&quot;Place Order&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -18,7 +22,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//table/thead/tr/th[text()=&quot;${headerText}&quot;]</value>
-      <webElementGuid>18c7f723-3425-4b4c-93d4-5e95db52615c</webElementGuid>
+      <value>//button[text()=&quot;Place Order&quot;]</value>
+      <webElementGuid>6a3c31d4-2cb0-4c16-b5a4-77f52915ac10</webElementGuid>
    </webElementProperties>
 </WebElementEntity>
