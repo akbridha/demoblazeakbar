@@ -17,8 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-def products = ['Iphone 6 32gb','Nexus 6','Samsung galaxy s7']
-WebUI.callTestCase(findTestCase('page/product/product_add_to_cart_dynamic'), [('arrayPassedFromTestCase') : products], FailureHandling.STOP_ON_FAILURE)
-WebUI.callTestCase(findTestCase('page/cart/cart_page_opened'), [('arrayPassedFromTestCase') : products], FailureHandling.STOP_ON_FAILURE)
+WebUI.navigateToUrl('https://www.demoblaze.com/index.html')
+
+WebUI.verifyElementVisible(findTestObject('Object Repository/cart/table_head_cart'), FailureHandling.STOP_ON_FAILURE)
 
 

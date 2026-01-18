@@ -17,12 +17,31 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('https://www.demoblaze.com/index.html')
 
-WebUI.openBrowser("https://www.demoblaze.com/index.html")
-ArrayList productToClick = ['Iphone 6 32gb'];
+// ArrayList productToClick = ['Iphone 6 32gb']
+ArrayList productToClick = (binding.hasVariable('arrayPassedFromTestCase') && arrayPassedFromTestCase != null) ? (arrayPassedFromTestCase as ArrayList) : ['Iphone 6 32gb', 'Nexus 6', 'Samsung galaxy s7']
 
 //WebUI.click(findTestObject('Object Repository/product/product_item_hardcoded'))
 //WebUI.click(findTestObject('null'))
 //WebUI.click(findTestObject('Object Repository/product/product_item_dynamic_text',['field':'Iphone 6 32gb']))
 //WebUI.closeBrowser()
-WebUI.click(findTestObject('Object Repository/home/item_name_clickable',["productName":productToClick[0]]))
+
+for(int i = 0; i < productToClick.size(); i++) {
+
+    println( productToClick[i])
+	WebUI.click(findTestObject('Object Repository/home/item_name_clickable', [('productName') : productToClick[i]]))
+	WebUI.click(findTestObject('product/button_add_to_cart'))
+    if (WebUI.waitForAlert(5, FailureHandling.OPTIONAL)) {
+        String text = WebUI.getAlertText()
+        WebUI.acceptAlert()
+        WebUI.comment('Accepted alert: ' + text)
+    } else {
+        WebUI.comment('No alert found after 5s')
+    }
+    WebUI.navigateToUrl('https://www.demoblaze.com/index.html')
+
+
+}
+
+
