@@ -18,7 +18,6 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WebUI.openBrowser("https://www.demoblaze.com/index.html")
 boolean itemFound, buttonNextVisible
 
 //
@@ -28,10 +27,8 @@ boolean itemFound, buttonNextVisible
 //
 //
 
-TestObject product = findTestObject(
-	'Object Repository/home/item_name_clickable',
-	["productName": "Nokia lumia 1520"]
-)
+// pakai productName langsung variabel pasti dipass dari skenario)
+TestObject product = findTestObject('Object Repository/home/item_name_clickable', ["productName": productName])
 
 TestObject nextBtn = findTestObject(
 	'Object Repository/home/button_page_navigation',
@@ -85,7 +82,9 @@ if (!found) {
 WebUI.click(product)
 
 WebUI.click(findTestObject('Object Repository/product/button_add_to_cart'))
-WebUI.closeBrowser()
+
+
+// WebUI.closeBrowser()
 
 
 //println(itemFound)

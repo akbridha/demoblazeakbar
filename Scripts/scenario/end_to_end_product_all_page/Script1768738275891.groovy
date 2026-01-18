@@ -17,5 +17,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('page/product/product_exist'), [:], FailureHandling.STOP_ON_FAILURE)
 
+// Daftar produk yang ingin dicek
+ArrayList productsToCheck = ['Iphone 6 32gb', 'Nexus 6', 'Samsung galaxy s7']
+
+WebUI.openBrowser("https://www.demoblaze.com/index.html")
+for (int i = 0; i < productsToCheck.size(); i++) {
+    WebUI.callTestCase(findTestCase('page/product/product_exist'), [('productName'): productsToCheck[i]], FailureHandling.STOP_ON_FAILURE)
+    WebUi.navigateToUrl('https://www.demoblaze.com/index.html')
+}

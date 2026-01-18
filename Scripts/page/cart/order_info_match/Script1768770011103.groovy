@@ -46,11 +46,10 @@ WebUI.comment('Parsed order info: ' + parsed.toString())
 // Name harus sama dengan yang dipass
 WebUI.verifyMatch(parsed['Name'], name, false, FailureHandling.STOP_ON_FAILURE)
 
-// Card Number harus berisi nilai kartu yang dipass (cocokkan numerik saja)
+// Card Number untuk angka saja
 WebUI.verifyMatch(parsed['Card Number'], card, false, FailureHandling.STOP_ON_FAILURE)
 
 // Amount harus bertipe angka diikuti 'USD'
 WebUI.verifyMatch(parsed['Amount'], '\\d+\\s*USD', true, FailureHandling.STOP_ON_FAILURE)
-
 // Id harus ada dan berupa angka
 WebUI.verifyMatch(parsed['Id'], '\\d+', true, FailureHandling.STOP_ON_FAILURE)
