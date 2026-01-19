@@ -17,12 +17,28 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-
 // Daftar produk yang ingin dicek
-ArrayList productsToCheck = ['Iphone 6 32gb', 'Nexus 6', 'Samsung galaxy s7']
+ArrayList productsToCheck = ['Iphone 6 32gb', 'Nexus 6', 'MacBook air']
 
-WebUI.openBrowser("https://www.demoblaze.com/index.html")
+def tableHeader = ['Pic', 'Title', 'Price']
+
+def arrayData = ['Jamal', 'arkansas', 'dellaware', '716630082', '11', '2028']
+
+WebUI.openBrowser('https://www.demoblaze.com/index.html')
+
 for (int i = 0; i < productsToCheck.size(); i++) {
-    WebUI.callTestCase(findTestCase('page/product/product_exist'), [('productName'): productsToCheck[i]], FailureHandling.STOP_ON_FAILURE)
-    WebUi.navigateToUrl('https://www.demoblaze.com/index.html')
+    WebUI.callTestCase(findTestCase('page/product/product_exist'), [('productName') : productsToCheck[i]], FailureHandling.STOP_ON_FAILURE)
+
+    WebUI.callTestCase(findTestCase('page/product/product_detail_match'), [('productName') : productsToCheck[i]], FailureHandling.STOP_ON_FAILURE)
+
+    WebUI.navigateToUrl('https://www.demoblaze.com/index.html')
 }
+
+WebUI.callTestCase(findTestCase('page/cart/cart_page_opened'), [('arrayPassedTableHeader') : tableHeader], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('page/cart/place_order'), [('dataBuyer') : arrayData], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('page/cart/order_info_match'), [('dataBuyer') : arrayData], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.closeBrowser()
+

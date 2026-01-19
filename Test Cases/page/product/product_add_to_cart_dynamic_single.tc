@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>product_add_to_cart_dynamic_single</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>07f0a9ba-b631-4edf-b83d-39357876116c</testCaseGuid>
+</TestCaseEntity>

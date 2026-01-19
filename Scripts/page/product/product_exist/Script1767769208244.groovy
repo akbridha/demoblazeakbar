@@ -17,8 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+boolean itemFound
 
-boolean itemFound, buttonNextVisible
+boolean buttonNextVisible
 
 //
 //
@@ -26,14 +27,10 @@ boolean itemFound, buttonNextVisible
 //itemFound = false
 //
 //
-
 // pakai productName langsung variabel pasti dipass dari skenario)
-TestObject product = findTestObject('Object Repository/home/item_name_clickable', ["productName": productName])
+TestObject product = findTestObject('Object Repository/home/item_name_clickable', [('productName') : productName])
 
-TestObject nextBtn = findTestObject(
-	'Object Repository/home/button_page_navigation',
-	["mode": "Next"]
-)
+TestObject nextBtn = findTestObject('Object Repository/home/button_page_navigation', [('mode') : 'Next'])
 
 boolean found = false
 
@@ -54,67 +51,35 @@ boolean found = false
 //		)
 //)
 //}
-
-
-
 for (int i = 0; i < 10; i++) {
+    found = WebUI.waitForElementVisible(product, 5, FailureHandling.OPTIONAL)
 
-	found = WebUI.waitForElementVisible(
-		product,
-		5,
-		FailureHandling.OPTIONAL
-	)
+    if (found) {
+        break
+    }
+    
+    if (WebUI.verifyElementClickable(nextBtn, FailureHandling.OPTIONAL)) {
+        WebUI.click(nextBtn)
 
-	if (found) break
-
-	if (WebUI.verifyElementClickable(nextBtn, FailureHandling.OPTIONAL)) {
-		WebUI.click(nextBtn)
-		WebUI.delay(2)
-	} else {
-		break
-	}
+        WebUI.delay(2)
+    } else {
+        break
+    }
 }
 
-if (!found) {
-	WebUI.verifyEqual(found, true, "Item tidak ditemukan")
+if (!(found)) {
+    WebUI.verifyEqual(found, true, 'Item tidak ditemukan')
 }
 
 WebUI.click(product)
 
 WebUI.click(findTestObject('Object Repository/product/button_add_to_cart'))
 
-
-// WebUI.closeBrowser()
-
-
-//println(itemFound)
-
-//if(!itemFound) {
-	
-
-
-//	
-//	buttonNextVisible = WebUI.waitForElementVisible(
-//		findTestObject(
-//		'Object Repository/home/button_page_navigation',
-//		["mode":"Next"]
-//		),
-//		10,
-//		FailureHandling.OPTIONAL
-//	)
-//		
-//}
-
-
-
-//boolean ditemukan = WebUI.waitForElementVisible(
-//	findTestObject('Object Repository/home/item_name_clickable',["productName" : "Nokia lumia 1520"]),
-//	10,
-//	FailureHandling.OPTIONAL
-//)
-
-//WebUI.waitForElementVisible(findTestObject('Object Repository/home/item_name_clickable',["productName" : "Nokiar lumia 1520"]), 100)
-
-
-//WebUI.closeBrowser()
+  if (WebUI.waitForAlert(5, FailureHandling.OPTIONAL)) {
+        String text = WebUI.getAlertText()
+        WebUI.acceptAlert()
+        WebUI.comment('Accepted alert: ' + text)
+    } else {
+        WebUI.comment('No alert found after 5s')
+    }
 

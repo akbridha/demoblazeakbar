@@ -17,4 +17,24 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.verifyElementVisible(findTestObject)i
+//WebUI.verifyElementVisible(findTestObject)i
+String productName = binding.getVariable("productName")
+
+
+WebUI.openBrowser('https://www.demoblaze.com/index.html')
+
+println(productName)
+
+WebUI.click(findTestObject('Object Repository/home/item_name_clickable', [('productName') : productName]))
+
+// test print data dulu
+if (WebUI.waitForElementVisible(findTestObject('Object Repository/product/product_detail_name'), 5, FailureHandling.OPTIONAL)) {
+    String textDetail = WebUI.getText(findTestObject('Object Repository/product/product_detail_name'))
+
+    println(textDetail)
+
+    println(productName)
+} else {
+    WebUI.comment('Element product_detail_name ntdiak terrlihat ; current URL: ' + WebUI.getUrl())
+}
+

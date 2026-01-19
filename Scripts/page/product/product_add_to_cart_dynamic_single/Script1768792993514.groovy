@@ -17,26 +17,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-def products = ['Iphone 6 32gb', 'Nexus 6', 'Samsung galaxy s7']
 
-def tableHeader = ['Pic', 'Title', 'Price']
 
-def availableCategory = ["Phones", "Laptops", "Monitors"]
-
-WebUI.openBrowser("https://www.demoblaze.com/index.html")
-for (String c : availableCategory) {
-    WebUI.callTestCase(findTestCase('page/home/button_filter_category_match'), [('categoryName'): c], FailureHandling.STOP_ON_FAILURE)
-    WebUI.navigateToUrl("https://www.demoblaze.com/index.html")
+// Expect a single product name passed as `productName` (no loop)
+//String targetProduct = binding.hasVariable('productName') 
+//
+//println(targetProduct)
+//WebUI.click(findTestObject('Object Repository/home/item_name_clickable', [('productName') : targetProduct]))
+WebUI.click(findTestObject('product/button_add_to_cart'))
+if (WebUI.waitForAlert(5, FailureHandling.OPTIONAL)) {
+    String text = WebUI.getAlertText()
+    WebUI.acceptAlert()
+    WebUI.comment('Accepted alert: ' + text)
+} else {
+    WebUI.comment('No alert found after 5s')
 }
+WebUI.navigateToUrl('https://www.demoblaze.com/index.html')
 
-//WebUI.callTestCase(findTestCase('page/home/button_filter_category_match'), [:], FailureHandling.STOP_ON_FAILURE)
-
-for (int i = 0; i < products.size(); i++) {
-	String p = products[i]
-	WebUI.callTestCase(findTestCase('page/product/product_detail_match'), [('productName'): p], FailureHandling.STOP_ON_FAILURE)
-	WebUI.callTestCase(findTestCase('page/product/product_add_to_cart_dynamic_single'), [('productName'): p], FailureHandling.STOP_ON_FAILURE)
-	WebUI.navigateToUrl('https://www.demoblaze.com/index.html')
-}
-
-WebUI.callTestCase(findTestCase('page/cart/cart_page_opened'), [('arrayPassedTableHeader') : tableHeader], FailureHandling.STOP_ON_FAILURE)
 

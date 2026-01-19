@@ -36,15 +36,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.WebElement
 
-WebUI.openBrowser("https://www.demoblaze.com/index.html")
+
 
 
 
 
 //#####ANGGAP INI DATA DARI DOKUMEN PRD
-
-String [] availableCategory = ["Phones", "Laptops", "Monitors"]
-
+// Accept a single `categoryName` from caller (scenario) if provided; otherwise use default.
+String categoryName = binding.getVariable('categoryName') 
 
 
 Map<String, List<String>> categoryItems = [
@@ -119,35 +118,52 @@ Map<String, List<String>> categoryItems = [
 
 
 
-for (String kategori : availableCategory) {
+// for (String kategori : availableCategory) {
 	
-		// klik filter kategori
-		WebUI.click(findTestObject(
-			'Object Repository/home/category_filter_clickable',
-			["kategori": kategori]
-		))
+// 		// klik filter kategori
+// 		WebUI.click(findTestObject(
+// 			'Object Repository/home/category_filter_clickable',
+// 			["kategori": kategori]
+// 		))
 	
-		// jaga jga halaman belum  load setelah klik filter
-		WebUI.delay(2)
+// 		// jaga jga halaman belum  load setelah klik filter
+// 		WebUI.delay(2)
 	
-		// ambil item berdasarkan kategori
-		List<String> items = categoryItems[kategori]
-		println(kategori)
-//	
-//		// validasi item tampil
-		for (String item : items) {
-			println("item yang di verify : " + item)
+// 		// ambil item berdasarkan kategori
+// 		List<String> items = categoryItems[kategori]
+// 		println(kategori)
+// //	
+// //		// validasi item tampil
+// 		for (String item : items) {
+// 			println("item yang di verify : " + item)
 	
-			// gunakan waitForElementVisible untuk menghindari stale element
-			WebUI.waitForElementVisible(findTestObject(
-				'Object Repository/home/item_name_clickable',
-				["productName": item]
-			), 10)
-		}
-	}
+// 			// gunakan waitForElementVisible untuk menghindari stale element
+// 			WebUI.waitForElementVisible(findTestObject(
+// 				'Object Repository/home/item_name_clickable',
+// 				["productName": item]
+// 			), 10)
+// 		}
+// 	}
 	
-	WebUI.closeBrowser()
+	// klik filter kategori (single)
+	WebUI.click(findTestObject('Object Repository/home/category_filter_clickable', ["kategori": categoryName]))
 
+	// tunggu halaman load setelah klik filter
+	WebUI.delay(2)
+
+	// ambil item berdasarkan kategori
+	List<String> items = categoryItems[categoryName]
+	println(categoryName)
+
+	// validasi item tampil
+	for (String item : items) {
+		println("item yang di verify : " + item)
+
+		// gunakan waitForElementVisible untuk menghindari stale element
+		WebUI.waitForElementVisible(findTestObject('Object Repository/home/item_name_clickable', ["productName": item]), 10)
+	}
+    
+//	WebUI.closeBrowser()
 
 
 //ambil sibling
